@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+          <input id='name' type="text">
+      </div>
+      <div>
+        <input id='password' type="password" onkeyup="checkCapsLock(event)"/>
+        <div id='message'></div>
+      </div>
+    </form>
+</body>
+<script>
+  function checkCapsLock(event){
+      if (event.getModifierState("CapsLock")) {
+        document.getElementById("message").innerText = "Caps Lock이 켜져 있습니다."
+      }
+      else {
+        document.getElementById("message").innerText = ""
+      }
+    }
+</script>
+</html>
